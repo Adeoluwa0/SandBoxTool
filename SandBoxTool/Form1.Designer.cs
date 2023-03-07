@@ -30,13 +30,16 @@ namespace SandBoxTool
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Program = new System.Windows.Forms.TabPage();
             this.Permissions = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Program.SuspendLayout();
@@ -45,7 +48,7 @@ namespace SandBoxTool
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.label1);
@@ -54,16 +57,15 @@ namespace SandBoxTool
             this.panel1.Size = new System.Drawing.Size(799, 449);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(272, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "SandBoxer";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(147, 376);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(489, 60);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Run";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -77,7 +79,9 @@ namespace SandBoxTool
             // 
             // Program
             // 
-            this.Program.Controls.Add(this.checkBox1);
+            this.Program.Controls.Add(this.button2);
+            this.Program.Controls.Add(this.textBox1);
+            this.Program.Controls.Add(this.label3);
             this.Program.Location = new System.Drawing.Point(4, 22);
             this.Program.Name = "Program";
             this.Program.Padding = new System.Windows.Forms.Padding(3);
@@ -88,6 +92,7 @@ namespace SandBoxTool
             // 
             // Permissions
             // 
+            this.Permissions.Controls.Add(this.checkBox1);
             this.Permissions.Controls.Add(this.label2);
             this.Permissions.Location = new System.Drawing.Point(4, 22);
             this.Permissions.Name = "Permissions";
@@ -96,26 +101,6 @@ namespace SandBoxTool
             this.Permissions.TabIndex = 1;
             this.Permissions.Text = "Permissions";
             this.Permissions.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(147, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(489, 60);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(136, 73);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -126,6 +111,52 @@ namespace SandBoxTool
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(272, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(319, 55);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "SandBox App";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "File";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(122, 32);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(303, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(431, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Browse";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(120, 34);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -154,8 +185,11 @@ namespace SandBoxTool
         private System.Windows.Forms.TabPage Program;
         private System.Windows.Forms.TabPage Permissions;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
